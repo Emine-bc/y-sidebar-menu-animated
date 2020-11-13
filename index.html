@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Side Bar Menu</title>
+</head>
+<body>
+    <div class="side">
+        <h1>My Logo</h1>
+        <ul>
+            <li class="active">Home</li>
+            <li>Products</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <button id="toggleBtn">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <div class="opaque"></div>
+
+    <script>
+        var side = document.querySelector('.side');
+        var toggleBtn = document.getElementById('toggleBtn');
+        toggleBtn.addEventListener('click', () => {
+            side.classList.toggle('closed');
+        })
+    </script>
+    
+</body>
+</html>
